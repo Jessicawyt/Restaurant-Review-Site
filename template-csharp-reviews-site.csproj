@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>template_csharp_reviews_site</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="template-csharp-review-site-tests\**" />
+    <Content Remove="template-csharp-review-site-tests\**" />
+    <EmbeddedResource Remove="template-csharp-review-site-tests\**" />
+    <None Remove="template-csharp-review-site-tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+
+</Project>
