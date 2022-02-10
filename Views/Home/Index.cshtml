@@ -1,0 +1,19 @@
+﻿@model List<Restaurant>
+
+@{
+    
+
+}
+
+<div>
+    <ul>
+    @foreach(Restaurant r in this.Model)
+    {
+        <li>@r.Name</li>
+        <li>@r.Address</li>
+        
+    }
+    </ul>
+</div>
+
+

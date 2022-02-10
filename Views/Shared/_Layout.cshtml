@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel ="stylesheet" href="/site.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ol>
+                <li><a href="/Home/Index">Resaturants</a></li>
+                <li><a href="/Home/Review">Reviews</a></li>
+            
+            </ol>
+        </nav>
+    </header>
+ 
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

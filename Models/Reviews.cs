@@ -1,6 +1,19 @@
 ﻿namespace template_csharp_reviews_site.Models
 {
-    public class Reviews
+    public class Review
     {
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Content { get; set; }
+        
+        public Review(string name, string content)
+        {
+
+            this.Name = name;
+            this.Content = content;
+
+        }
+
     }
 }
