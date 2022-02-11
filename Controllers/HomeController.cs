@@ -33,6 +33,7 @@ namespace template_csharp_reviews_site.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 
 }
