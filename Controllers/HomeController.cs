@@ -1,54 +1,40 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using template_csharp_reviews_site.Models;
+using template_csharp_reviews_site.Repositories;
 
 namespace template_csharp_reviews_site.Controllers
 {
-    public class HomeController : Controller    
+   
+    public class HomeController : Controller
     {
-        // I had to add stuff so that you can see the folders.
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index()
         {
-            Review r1 = new("Sue", "Absolutely the worst restaurant!Always short staffed...");
-            Review r2 = new("Alissa", "Love it!");
-            List<Review> mcdReviews = new List<Review> { r1, r2 };
-
-            Review r3 = new("Poppy", "Very Meeeeeeh!");
-            Review r4 = new("Tim", "Fav one to go!");
-            List<Review> wendysReviews = new List<Review> { r3, r4 };
-
-            Review r5 = new("Don", "Too many people! Overrated!");
-            Review r6 = new("Leah", "Overrated!");
-            List<Review> ckfReviews = new List<Review> { r5, r6 };
-
-            Restaurant mcd = new Restaurant("McDonalds", mcdReviews, "Kent");
-            Restaurant wendys = new Restaurant("Wendys", mcdReviews, "Kent");
-            Restaurant chickfila = new Restaurant("Chick-fil-A", mcdReviews, "Kent");
-
-            List<Restaurant> restaurantList = new List<Restaurant>() { mcd, wendys, chickfila };
-
-            return View(restaurantList);
-
+            return View();
         }
 
-     
-
-        public IActionResult Review()
+        public IActionResult Privacy()
         {
-            Review r1 = new("Sue", "Absolutely the worst restaurant!Always short staffed...");
-            Review r2 = new("Alissa", "Love it!");
-            Review r3 = new("Poppy", "Very Meeeeeeh!");
-            Review r4 = new("Tim", "Fav one to go!");
-            Review r5 = new("Don", "Too many people! Overrated!");
-            Review r6 = new("Leah", "Overrated!");
-
-            List<Review> RList = new List<Review>() { r1, r2, r3, r4, r5, r6 };
-
-
-            return View(RList);
+            return View();
         }
 
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
 
     }
+
 }
+
