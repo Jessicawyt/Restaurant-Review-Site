@@ -12,7 +12,9 @@ namespace template_csharp_reviews_site.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return View(_repo.GetAll());
         }
+
+        public 
     }
 }

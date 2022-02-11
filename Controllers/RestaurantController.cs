@@ -24,14 +24,3 @@ namespace template_csharp_reviews_site.Controllers
 
     }
 }
-
-//Review r1 = new("Sue", "Absolutely the worst restaurant!Always short staffed...");
-//Review r2 = new("Alissa", "Love it!");
-
-
-//Review r3 = new("Poppy", "Very Meeeeeeh!");
-//Review r4 = new("Tim", "Fav one to go!");
-
-
-//Review r5 = new("Don", "Too many people! Overrated!");
-//Review r6 = new("Leah", "Overrated!");
