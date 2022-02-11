@@ -27,6 +27,7 @@ namespace template_csharp_reviews_site
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationContext>();
             services.AddScoped<IRestaurantRepo, RestaurantRepo>();
+            services.AddScoped<IReviewRepo, ReviewRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
