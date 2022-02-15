@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Restaurant>
+
+@{
+}
+
+
+<div>@foreach(Restaurant r in Model)
+    {
+        <h2><a href ="/Restaurant/Review/@r.Id"> @r.Name</a></h2>
+    }
+</div>
