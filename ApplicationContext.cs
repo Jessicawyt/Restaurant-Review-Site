@@ -21,7 +21,7 @@ namespace template_csharp_reviews_site
             builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 3, Name = "Chick-Fil-A",  Address = "Cleveland" });
 
             builder.Entity<Review>().HasData(new Review() { Id = 1, Name = "Sue", Content = "Absolutely the worst restaurant!Always short staffed...", RestaurantId = 1});
-            builder.Entity<Review>().HasData(new Review() { Id = 2, Name = "Leah", Content =  "Overrated!", RestaurantId = 2 });
+            builder.Entity<Review>().HasData(new Review() { Id = 2, Name = "Leah", Content =  "Overrated!",  RestaurantId = 2 });
             builder.Entity<Review>().HasData(new Review() { Id = 3, Name = "Poppy", Content = "Very Meeeeeeh!", RestaurantId = 3 });
 
 
