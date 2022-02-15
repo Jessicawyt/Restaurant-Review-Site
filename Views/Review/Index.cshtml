@@ -7,7 +7,6 @@
 @*foreach loop here next time and need to make database *@
 
 @foreach(Review review in Model){
-    <span>@review.Name</span>
-    <span>@review.Content</span>
-    <span>@review.Restaurant.Name</span>
+    <span>@review.Name : @review.Content</span>
+    <br>
 }
