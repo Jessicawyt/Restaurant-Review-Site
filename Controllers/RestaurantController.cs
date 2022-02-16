@@ -1,25 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using template_csharp_reviews_site.Repositories;
 
 namespace template_csharp_reviews_site.Controllers
 {
     public class RestaurantController : Controller
     {
-        private IRestaurantRepo _repo;
-        public RestaurantController(IRestaurantRepo repo)
+        //private IRestaurantRepo _repo;
+        private ApplicationContext _context;
+        public RestaurantController()
         {
-            _repo = repo;
+            _context = new ApplicationContext();
         }
         public IActionResult Index()
         {
-            return View(_repo.GetAll());
+            return View(_context.restaurants.ToList());
 
         }
 
 
-        public IActionResult Review(int id)
+        public IActionResult Detail(int id)
         {
-            return View(_repo.GetById(id));
+            ViewBag.Reviews = _context.reviews.ToList();   
+
+            return View(_context.restaurants.Find(id));
         }
 
     }

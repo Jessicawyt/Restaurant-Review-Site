@@ -6,6 +6,8 @@
 
 <div>@foreach(Restaurant r in Model)
     {
-        <h2><a href ="/Restaurant/Review/@r.Id"> @r.Name</a></h2>
+        @*Not sure if we should show all restaurant properties in this view, if we dont, I dont know how to show related reviews and restaurant properties on the same page*@
+        <h2><a href ="/Restaurant/Detail/@r.Id"> @r.Name</a></h2>
+        @*<h2>@Html.ActionLink(r.Name, "ChosenDetail", "Review", new {restaurantId = r.Id})</h2>*@
     }
 </div>

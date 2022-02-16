@@ -1,0 +1,15 @@
+﻿body {
+}
+
+.review-list {
+    border-style:solid;
+    border-width:2px;
+    border-radius:6px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.review-item {
+    margin:1rem;
+}

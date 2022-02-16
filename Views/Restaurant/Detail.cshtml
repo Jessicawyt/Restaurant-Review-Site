@@ -1,0 +1,20 @@
+﻿@model Restaurant
+
+@*
+    
+*@
+ 
+
+<div>
+    <h2>@Model.Name</h2>
+    <span>Location: @Model.Address</span>
+
+    <a href="/Review/Add">Write a review</a>
+
+    <div class="review-list">
+        @foreach(Review review in Model.Reviews)
+        {
+            <p class="review-item">@review.Name : @review.Content</p>
+        }
+    </div>
+</div>

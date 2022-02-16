@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Review>
+
+
+
+@{
+}
+@*For the way we did this we need a new tab for it. Review *@
+
+@foreach(Review review in Model){
+
+    <span>@review.Name : @review.Content</span>
+    <br>
+
+}
