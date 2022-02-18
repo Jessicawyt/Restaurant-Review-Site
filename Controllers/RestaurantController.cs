@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using template_csharp_reviews_site.Repositories;
+using template_csharp_reviews_site.Models;
 
 namespace template_csharp_reviews_site.Controllers
 {
@@ -14,16 +15,15 @@ namespace template_csharp_reviews_site.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.restaurants.ToList());
+            return View(_context.Restaurants.ToList());
 
         }
 
-
         public IActionResult Detail(int id)
         {
-            ViewBag.Reviews = _context.reviews.ToList();   
 
-            return View(_context.restaurants.Find(id));
+             ViewBag.Reviews = _context.Reviews.ToList();   
+            return View(_context.Restaurants.Find(id));
         }
 
     }

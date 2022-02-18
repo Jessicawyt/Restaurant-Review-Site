@@ -14,12 +14,12 @@ namespace template_csharp_reviews_site.Repositories
 
         public Restaurant GetById(int id)
         {
-            return _context.restaurants.Find(id);
+            return _context.Restaurants.Find(id);
         }
 
         public List<Restaurant> GetAll()
         {
-            return _context.restaurants.ToList();
+            return _context.Restaurants.ToList();
         }
     }
 }

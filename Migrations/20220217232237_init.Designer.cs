@@ -9,8 +9,8 @@ using template_csharp_reviews_site;
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220214205146_initial")]
-    partial class initial
+    [Migration("20220217232237_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,30 +30,36 @@ namespace template_csharp_reviews_site.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Information")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("restaurants");
+                    b.ToTable("Restaurants");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Address = "Cleveland",
+                            Information = "McDonald's is the most popular and common fast food chain in The USA and Canada. McDonald's is the world's largest restaurant chain by revenue, serving over 69 million customers daily in over 100 countries across 37,855 outlets as of 2018",
                             Name = "McDonalds"
                         },
                         new
                         {
                             Id = 2,
                             Address = "Cleveland",
+                            Information = "Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio.",
                             Name = "Wendys"
                         },
                         new
                         {
                             Id = 3,
                             Address = "Cleveland",
+                            Information = "Chick-fil-A a play on the American English pronunciation of filet. Is one of the largest American fast food restaurant chains and the largest whose specialty is chicken sandwiches. Its headquarters is in College Park, Georgia.",
                             Name = "Chick-Fil-A"
                         });
                 });
@@ -78,7 +84,7 @@ namespace template_csharp_reviews_site.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("reviews");
+                    b.ToTable("Reviews");
 
                     b.HasData(
                         new

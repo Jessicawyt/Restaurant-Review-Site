@@ -14,18 +14,18 @@ namespace template_csharp_reviews_site.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.reviews.ToList());
+            return View(_context.Reviews.ToList());
         }
 
         public IActionResult ChosenDetail(int restaurantId)
         {
 
-            return View(_context.reviews.Where(review => review.RestaurantId == restaurantId).ToList());
+            return View(_context.Reviews.Where(review => review.RestaurantId == restaurantId).ToList());
         }
 
         public IActionResult Add()
         {
-            ViewBag.Restaurants = _context.restaurants.ToList();   
+            ViewBag.Restaurants = _context.Restaurants.ToList();   
             return View();
         }
         [HttpPost]
@@ -36,7 +36,7 @@ namespace template_csharp_reviews_site.Controllers
                 ViewBag.Error = "There is nothing to be saved";
                 return View(review);
             }
-            _context.reviews.Add(review);
+            _context.Reviews.Add(review);
             _context.SaveChanges(); 
             return RedirectToAction("Index");
         }
