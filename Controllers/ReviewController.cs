@@ -17,30 +17,50 @@ namespace template_csharp_reviews_site.Controllers
             return View(_context.Reviews.ToList());
         }
 
-        public IActionResult ChosenDetail(int restaurantId)
+        public IActionResult Detail(int restaurantId)
         {
 
             return View(_context.Reviews.Where(review => review.RestaurantId == restaurantId).ToList());
         }
 
-        public IActionResult Add()
+        public IActionResult Add(int restaurantId)
         {
-            ViewBag.Restaurants = _context.Restaurants.ToList();   
-            return View();
+            Review model = new Review() { Restaurant = _context.restaurants.Find(restaurantId), RestaurantId = restaurantId };    
+            return View(model);
         }
         [HttpPost]
         public IActionResult Add(Review review)
         {
-            if (string.IsNullOrEmpty(review.Content))
+            if (string.IsNullOrEmpty(review.Content)|| string.IsNullOrEmpty(review.Name))
             {
                 ViewBag.Error = "There is nothing to be saved";
                 return View(review);
             }
-            _context.Reviews.Add(review);
-            _context.SaveChanges(); 
-            return RedirectToAction("Index");
+            _context.reviews.Add(review);
+            _context.SaveChanges(true); 
+            return RedirectToAction("Detail","Restaurant", new { id = review.RestaurantId});
         }
 
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Restaurants = _context.restaurants.ToList();
+            Review model = _context.reviews.Find(id);
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Edit(Review model)
+        {
+            if(string.IsNullOrEmpty(model.Content) || string.IsNullOrEmpty(model.Name))
+            {
+                ViewBag.Error = "There is nothing to be saved";
+                return View(model);
+            }
+
+            _context.reviews.Update(model);
+            _context.SaveChanges();
+            
+            return RedirectToAction("Detail","Restaurant",new {id = model.RestaurantId});
+        }
 
     }
 }
