@@ -10,7 +10,7 @@
         public virtual Restaurant Restaurant { get; set; }
         public int RestaurantId { get; set; }
 
-      //  public string RestaurantName { get; set; }
+      
 
 
     }

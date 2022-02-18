@@ -10,6 +10,7 @@ namespace template_csharp_reviews_site
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
             builder.UseSqlServer("Server=(localdb)\\mssqllocaldb; Database = ReviewSite; Trusted_connection=True");
+            builder.UseLazyLoadingProxies();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
