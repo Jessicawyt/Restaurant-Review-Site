@@ -25,7 +25,7 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Add(int restaurantId)
         {
-            Review model = new Review() { Restaurant = _context.restaurants.Find(restaurantId), RestaurantId = restaurantId };    
+            Review model = new Review() { Restaurant = _context.Restaurants.Find(restaurantId), RestaurantId = restaurantId };    
             return View(model);
         }
         [HttpPost]
@@ -36,15 +36,15 @@ namespace template_csharp_reviews_site.Controllers
                 ViewBag.Error = "There is nothing to be saved";
                 return View(review);
             }
-            _context.reviews.Add(review);
+            _context.Reviews.Add(review);
             _context.SaveChanges(true); 
             return RedirectToAction("Detail","Restaurant", new { id = review.RestaurantId});
         }
 
         public IActionResult Edit(int id)
         {
-            ViewBag.Restaurants = _context.restaurants.ToList();
-            Review model = _context.reviews.Find(id);
+            ViewBag.Restaurants = _context.Restaurants.ToList();
+            Review model = _context.Reviews.Find(id);
             return View(model);
         }
         [HttpPost]
@@ -56,7 +56,7 @@ namespace template_csharp_reviews_site.Controllers
                 return View(model);
             }
 
-            _context.reviews.Update(model);
+            _context.Reviews.Update(model);
             _context.SaveChanges();
             
             return RedirectToAction("Detail","Restaurant",new {id = model.RestaurantId});
