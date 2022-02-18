@@ -13,12 +13,12 @@ namespace template_csharp_reviews_site.Repositories
         }
         public List<Review> GetAll()
         {
-            return _context.reviews.ToList() ;
+            return _context.Reviews.ToList() ;
         }
 
         public Review GetById(int id)
         {
-            return _context.reviews.Find(id);
+            return _context.Reviews.Find(id);
         }
     }
 }
