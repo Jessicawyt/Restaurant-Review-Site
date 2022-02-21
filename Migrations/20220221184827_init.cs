@@ -2,7 +2,7 @@
 
 namespace template_csharp_reviews_site.Migrations
 {
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

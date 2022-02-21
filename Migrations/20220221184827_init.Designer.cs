@@ -9,8 +9,8 @@ using template_csharp_reviews_site;
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220214205146_initial")]
-    partial class initial
+    [Migration("20220221184827_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
