@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using template_csharp_reviews_site;
 
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220223153150_updatedImg")]
+    partial class updatedImg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +48,7 @@ namespace template_csharp_reviews_site.Migrations
                         {
                             Id = 1,
                             Address = "Cleveland",
-                            Image = "https://th.bing.com/th/id/R.a7030fb5624db3715b9a0b0698b1352f?rik=qMWOVvISFUC9Ig&riu=http%3a%2f%2fpngimg.com%2fuploads%2fmcdonalds%2fmcdonalds_PNG19.png&ehk=DcGet8JyK0nOmVYPW80XxvGb5RhYzJs4JLr%2fCOBW8Wk%3d&risl=&pid=ImgRaw&r=0",
+                            Image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRINiC0VEj69xrRNKl52hIhXR82J5_iOZ2S3n3w_SIUwARJHL9t",
                             Information = "McDonald's is the most popular and common fast food chain in The USA and Canada. McDonald's is the world's largest restaurant chain by revenue, serving over 69 million customers daily in over 100 countries across 37,855 outlets as of 2018",
                             Name = "McDonalds"
                         },
