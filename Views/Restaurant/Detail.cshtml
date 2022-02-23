@@ -14,12 +14,13 @@
         <h3>Reviews</h3>
         <button><a href="/Review/Add/?restaurantId=@Model.Id">Write a review</a></button>
 
-        <div class="review-list"> 
-            @foreach(Review review in Model.Reviews)
-            {
-                <p class="review-item">@review.Name : @review.Content</p>
-                <button><a href="/Review/Edit/@review.Id">Edit</a></button>
-            }
-        </div>
+       <div class="review-list">
+          @foreach(Review review in Model.Reviews)
+           {
+            <p class="review-item">@review.Name : @review.Content</p>
+            <a href="/Review/Edit/@review.Id">Edit</a>
+            <a href="/Review/Delete/@review.Id">Delete</a>
+           }
+
     </div>
 </div>
