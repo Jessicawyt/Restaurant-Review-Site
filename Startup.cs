@@ -24,7 +24,7 @@ namespace template_csharp_reviews_site
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddDbContext<ApplicationContext>();
             services.AddScoped<IRestaurantRepo, RestaurantRepo>();
             services.AddScoped<IReviewRepo, ReviewRepo>();

@@ -1,12 +1,145 @@
 
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
+    ViewData["Title"] = "HomePage";
 
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=IM+Fell+DW+Pica+SC&family=Kanit:wght@500&family=PT+Sans&family=Permanent+Marker&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=IM+Fell+DW+Pica+SC&family=PT+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F12%2F30%2F2021-restaurant-openings-etta-FT-BLOG1220-2.jpg") no-repeat center center fixed;
+            margin:0;
+            padding:0;
+            background-size: cover;
+            color:whitesmoke;
+            position:relative;
+            
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        header {
+            margin:7vh 18vw;
+            position:relative;
+            z-index:30;
+        }
+
+        main {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            padding-top:16vh;
+            position:relative;
+            z-index:20;
+        }
+
+        .home-page {
+            
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
+ 
+
+        body::after {
+            content: '';
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.55);
+            position:absolute;
+            z-index:10;
+        }
+
+        h1 {
+            font-size:3.5rem;
+            margin-bottom:1rem;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        p{
+            font-size:2rem;
+            margin-top:0;
+        }
+
+        .home{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            align-items:baseline;
+            text-decoration:none;
+        }
+
+        .right-nav{
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+        }
+
+        .nav-item{
+            margin-left:2rem;
+        }
+
+        .home a{
+            text-decoration:none;
+            color:white;
+        }
+
+        .home li{
+            list-style-type:none;
+        }
+
+        .navbar-brand{
+            font-family: 'Permanent Marker', cursive;
+            font-size:1.7rem;
+        }
+
+        main, .right-nav{
+            font-family: 'Rubik', sans-serif;
+        }
+
+        main p{
+            
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="home">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">QJD Says</a>
+            <div class="right-nav">
+                
+                <a class="nav-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a>               
+                <a class="nav-item" asp-area="" asp-controller="Restaurant" asp-action="Index">All Restaurants</a>
+                <a class="nav-item" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>What's for dinner?</h1>
+        <p>Discover the best food & drinks in Cleveland, OH</p>
+    </main>
 
 
+
+
+</body>
+</html>
+
+
+@section HomePage {
+    @*<link href="" />*@
+    
+}
