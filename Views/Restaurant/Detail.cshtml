@@ -12,7 +12,7 @@
 
     <div class="review-container">
         <h3>Reviews</h3>
-        <button><a href="/Review/Add/?restaurantId=@Model.Id">Write a review</a></button>
+        <a href="/Review/Add/?restaurantId=@Model.Id">Write a review</a>
 
        <div class="review-list">
           @foreach(Review review in Model.Reviews)
@@ -21,7 +21,7 @@
             <a href="/Review/Edit/@review.Id">Edit</a>
             <a href="/Review/Delete/@review.Id">Delete</a>
            }
+       </div>
 
     </div>
 </div>
-Q

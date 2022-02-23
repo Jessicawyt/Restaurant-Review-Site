@@ -48,19 +48,17 @@
 .restaurant-container a {
     text-decoration: none;
     color: white;
-}
-
-.restaurant-container button {
     background-color: #007bff;
     border-radius: 6px;
     margin-bottom: 1rem;
     max-width: max-content;
-    font-weight:bold;
-    
-    
+    font-weight: bold;
+    padding:4px;
 }
 
-.review-list{
-    
+
+.main-container{
+    padding-left:10vw;
+    padding-top:2rem;
 }
 
