@@ -11,6 +11,8 @@ namespace template_csharp_reviews_site.Models
 
         public string Address { get; set; }
         public virtual List<Review> Reviews { get; set; }
+
+        public string Image { get; set; }
        
     }
 }

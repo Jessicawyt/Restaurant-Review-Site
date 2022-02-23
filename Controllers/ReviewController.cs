@@ -62,5 +62,19 @@ namespace template_csharp_reviews_site.Controllers
             return RedirectToAction("Detail","Restaurant",new {id = model.RestaurantId});
         }
 
+
+
+
+        public IActionResult Delete(int id)
+        {
+
+            Review reviewToDelete = _context.Reviews.Find(id);
+            _context.Remove(reviewToDelete);
+            _context.SaveChanges();
+
+            return RedirectToAction("Detail", "Restaurant", new { id = reviewToDelete.RestaurantId });
+        }
+
+
     }
 }

@@ -16,10 +16,16 @@ namespace template_csharp_reviews_site
         protected override void OnModelCreating(ModelBuilder builder)
         {
             
-
-            builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 1, Name = "McDonalds",   Address = "Cleveland", Information = "McDonald's is the most popular and common fast food chain in The USA and Canada. McDonald's is the world's largest restaurant chain by revenue, serving over 69 million customers daily in over 100 countries across 37,855 outlets as of 2018" });   
-            builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 2, Name = "Wendys",   Address = "Cleveland", Information = "Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio." });  
-            builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 3, Name = "Chick-Fil-A",  Address = "Cleveland", Information = "Chick-fil-A a play on the American English pronunciation of filet. Is one of the largest American fast food restaurant chains and the largest whose specialty is chicken sandwiches. Its headquarters is in College Park, Georgia." }); 
+            builder.Entity<Restaurant>().HasData(new Restaurant() { 
+                Id = 1, 
+                Name = "McDonalds",   
+                Address = "Cleveland", 
+                Information = "McDonald's is the most popular and common fast food chain in The USA and Canada. McDonald's is the world's largest restaurant chain by revenue, serving over 69 million customers daily in over 100 countries across 37,855 outlets as of 2018", 
+                Image = "https://th.bing.com/th/id/R.a7030fb5624db3715b9a0b0698b1352f?rik=qMWOVvISFUC9Ig&riu=http%3a%2f%2fpngimg.com%2fuploads%2fmcdonalds%2fmcdonalds_PNG19.png&ehk=DcGet8JyK0nOmVYPW80XxvGb5RhYzJs4JLr%2fCOBW8Wk%3d&risl=&pid=ImgRaw&r=0"
+            });  
+            
+            builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 2, Name = "Wendys",   Address = "Cleveland", Information = "Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio.", Image= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRINiC0VEj69xrRNKl52hIhXR82J5_iOZ2S3n3w_SIUwARJHL9t" });  
+            builder.Entity<Restaurant>().HasData(new Restaurant() { Id = 3, Name = "Chick-Fil-A",  Address = "Cleveland", Information = "Chick-fil-A a play on the American English pronunciation of filet. Is one of the largest American fast food restaurant chains and the largest whose specialty is chicken sandwiches. Its headquarters is in College Park, Georgia.",Image= "https://pbs.twimg.com/profile_images/1148729107406041088/emlH0Rv4_400x400.png" }); 
 
             builder.Entity<Review>().HasData(new Review() { Id = 1, Name = "Sue", Content = "Absolutely the worst restaurant!Always short staffed...", RestaurantId = 1});
             builder.Entity<Review>().HasData(new Review() { Id = 2, Name = "Leah", Content =  "Overrated!",  RestaurantId = 2 });
