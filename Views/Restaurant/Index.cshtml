@@ -4,31 +4,19 @@
 }
 
 
-<div>@foreach(Restaurant r in Model)
+<div class="restaurant-index-container">
+    
+    
+    @foreach(Restaurant r in Model)
     {
-        
-        if(r.Id == 1 )
-        {
-         
-           <h2><a href ="/restaurant/detail/@r.Id"> @r.Name</a></h2>
-           
-           
-          
-               <img src="https://www.tasteofhome.com/wp-content/uploads/2021/03/mcdonalds-1200x630-GettyImages-1285446341.jpg" style="width: 100px;" alt="Mcdonalds">
-          
-        }
-        else if (r.Id == 2)
-        {
-            <h2><a href ="/restaurant/detail/@r.Id"> @r.Name</a></h2>
-             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRINiC0VEj69xrRNKl52hIhXR82J5_iOZ2S3n3w_SIUwARJHL9t" style="width: 100px;" alt="Wendy's">
-        }
-         else if (r.Id == 3)
-        {
-            <h2><a href ="/restaurant/detail/@r.Id"> @r.Name</a></h2>
-             <img src="https://pbs.twimg.com/profile_images/1148729107406041088/emlH0Rv4_400x400.png" style="width: 100px;" alt="chick fil a">
+        <div class="space">
+            <h2 class="restaurant-name"><a href ="/restaurant/detail/@r.Id"> @r.Name</a></h2>
+            <img src="@r.Image" style="width: 95px;" alt="Restaurant Picture">
+            
+        </div>
 
-        }
         
 
     }
 </div>
+
