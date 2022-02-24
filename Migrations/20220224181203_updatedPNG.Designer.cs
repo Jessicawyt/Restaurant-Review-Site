@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using template_csharp_reviews_site;
 
 namespace template_csharp_reviews_site.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220224181203_updatedPNG")]
+    partial class updatedPNG
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace template_csharp_reviews_site.Migrations
                         {
                             Id = 2,
                             Address = "Cleveland",
-                            Image = "https://freepikpsd.com/file/2019/11/wendys-logo-transparent-png-2-Images.png",
+                            Image = "https://flyclipart.com/thumb2/wendys-logo-png-transparent-wendys-logo-images-252225.png",
                             Information = "Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, in Columbus, Ohio.",
                             Name = "Wendys"
                         },

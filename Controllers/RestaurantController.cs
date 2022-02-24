@@ -21,8 +21,6 @@ namespace template_csharp_reviews_site.Controllers
 
         public IActionResult Detail(int id)
         {
-
-             ViewBag.Reviews = _context.Reviews.ToList();   
             return View(_context.Restaurants.Find(id));
         }
 
