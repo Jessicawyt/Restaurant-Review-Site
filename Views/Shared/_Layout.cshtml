@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - CoursesWorkshop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=IM+Fell+DW+Pica+SC&family=Kanit:wght@500&family=PT+Sans&family=Permanent+Marker&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=IM+Fell+DW+Pica+SC&family=PT+Sans&family=Permanent+Marker&display=swap" rel="stylesheet">
     @await RenderSectionAsync("HomePage", required: false)
     <link rel="stylesheet" href="~/css/StyleSheet.css" />
 
@@ -15,7 +16,7 @@
 
 </head>
 <body>
-    <header>
+@*    <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">QJD Says</a>
@@ -31,14 +32,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Restaurant" asp-action="Index">All Restaurants</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Review" asp-action="Index">Reviews</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
+    </header>*@
+
+    <header>
+        <nav class="home">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">QJD Says</a>
+            <div class="right-nav">               
+                <a class="nav-item" asp-area="" asp-controller="Home" asp-action="Index">Home</a>               
+                <a class="nav-item" asp-area="" asp-controller="Restaurant" asp-action="Index">All Restaurants</a>    
+            </div>
+        </nav>
     </header>
+
     <div >
         <main class="main-container">
             @RenderBody()

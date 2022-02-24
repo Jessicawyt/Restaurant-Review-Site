@@ -2,24 +2,13 @@
    
 }
 
-.restaurant-index-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-}
+
 
 .space
 {
-    min-width: 100px;
-    text-align: center;
-    margin:20vh 2rem;
+
 }
 
-.restaurant1-name {
-    color: aqua;
-    
-}
 
 .restaurant-container{
     margin:1rem 20vw;
@@ -44,21 +33,149 @@
     margin-bottom:1rem;
 }
 
+.restaurant-name a{
+    color:white;
+}
 
 .restaurant-container a {
     text-decoration: none;
     color: white;
-    background-color: #007bff;
+    background-color: black;
     border-radius: 6px;
     margin-bottom: 1rem;
     max-width: max-content;
     font-weight: bold;
-    padding:4px;
+    padding: 4px;
+    font-size: 1.2rem;
+    padding: 5px;
 }
 
 
-.main-container{
-    padding-left:10vw;
-    padding-top:2rem;
+.main-container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 2rem;
+    z-index: 100;
+    position:relative;
 }
 
+body {
+    background: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F12%2F30%2F2021-restaurant-openings-etta-FT-BLOG1220-2.jpg") no-repeat center center fixed;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: whitesmoke;
+    position: relative;
+}
+
+.restaurant-index-container {
+    position: relative;
+    z-index: 100;
+    border-radius: 10px;
+    height:65vh;
+
+    padding:2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows:50px;
+    justify-content: center;
+   
+}
+
+
+
+.space {
+    min-width: 100px;
+    max-height:100%;
+    text-align: center;
+    margin: 3vh 1rem;
+    position: relative;
+    z-index: 110;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+ 
+}
+
+/**::after {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    background-size:cover;
+    z-index:-1;
+}*/
+
+body::after {
+    content: '';
+    left: 10%;
+    right: 10%;
+    top: 0;
+    bottom: -6%;
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    z-index: 0;
+    border-radius:10px;
+    
+}
+
+header {
+    margin: 7vh 18vw;
+    position: relative;
+    z-index: 30;
+}
+
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    text-decoration: none;
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.home a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.7rem;
+}
+
+.right-nav {
+    font-family: 'Rubik', sans-serif;
+}
+
+.edit-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.restaurant-index-container img{
+  
+    height:150px;
+   
+}
+.restaurant-index-container h2{
+    font-size:1.5rem;
+}
