@@ -1,0 +1,43 @@
+﻿@model template_csharp_reviews_site.Models.Review
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<div class="edit-container">
+    <h1>Add</h1>
+
+    <h4>@Model.Restaurant.Name</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Add">
+                <input asp-for="RestaurantId" type="hidden" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+ @*   <script type="text/javascript">
+    </script>*@
+}
+

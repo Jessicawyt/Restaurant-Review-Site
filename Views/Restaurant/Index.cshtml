@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Restaurant>
+
+@{
+}
+
+
+<div class="restaurant-index-container">
+    
+    @foreach(Restaurant r in Model)
+    {
+        <div class="space">
+            <h2 class="restaurant-name"><a href ="/restaurant/detail/@r.Id"> @r.Name</a></h2>
+            <img src="@r.Image" alt="Restaurant Picture">
+            
+        </div>
+    }
+</div>
+

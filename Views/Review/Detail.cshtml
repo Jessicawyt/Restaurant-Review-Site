@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Review>
+
+@{
+}
+
+<div>
+    @foreach(Review review in Model)
+    {
+        <p>@review.Name : @review.Content</p>
+         
+    }
+    
+    <br>
+</div>

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace template_csharp_reviews_site
-{
+{  
     public class Program
     {
         public static void Main(string[] args)

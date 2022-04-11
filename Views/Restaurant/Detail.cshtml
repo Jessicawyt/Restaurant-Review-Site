@@ -1,0 +1,27 @@
+﻿@model Restaurant
+
+@*
+    
+*@
+ 
+
+<div class="restaurant-container">
+    <h2>@Model.Name</h2>
+    <p>@Model.Information </p>
+    <p>Location: @Model.Address</p>
+
+    <div class="review-container">
+        <h3>Reviews</h3>
+        <a href="/Review/Add/?restaurantId=@Model.Id">Write a review</a>
+
+       <div class="review-list">
+          @foreach(Review review in Model.Reviews)
+           {
+            <p class="review-item">@review.Name : @review.Content</p>
+            <a href="/Review/Edit/@review.Id">Edit</a>
+            <a href="/Review/Delete/@review.Id">Delete</a>
+           }
+       </div>
+
+    </div>
+</div>
